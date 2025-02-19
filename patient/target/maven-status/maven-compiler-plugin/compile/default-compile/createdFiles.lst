@@ -1,0 +1,5 @@
+fr/unice/patient/config/SwaggerConfig.class
+fr/unice/patient/PatientApplication.class
+fr/unice/patient/controller/PatientController.class
+fr/unice/patient/model/Patient.class
+fr/unice/patient/service/PatientService.class

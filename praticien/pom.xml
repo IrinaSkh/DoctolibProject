@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+
+    <groupId>fr.unice</groupId>
+    <artifactId>patient</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>patient</name>
+    <description>Micro service Patient</description>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.4.RELEASE</version>
+        <relativePath /> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>maven Repo1</id>
+            <name>maven Repo1</name>
+            <url>http://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
+            <id>Sonatype repository</id>
+            <name>Sonatype's Maven repository</name>
+            <url>http://oss.sonatype.org/content/groups/public</url>
+        </repository>
+
+    </repositories>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Edgware.SR5</version>
+                <!-- Adaptez selon la version de Spring Boot -->
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<project xmlns="http://maven.apache.org/POM/4.0.0"-->
+<!--         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">-->
+<!--<modelVersion>4.0.0</modelVersion>-->
+
+<!--<groupId>fr.unice</groupId>-->
+<!--<artifactId>praticien</artifactId>-->
+<!--<version>1.0-SNAPSHOT</version>-->
+
+<!--    <properties>-->
+<!--        <java.version>1.8</java.version>-->
+<!--        <maven.compiler.source>1.8</maven.compiler.source>-->
+<!--        <maven.compiler.target>1.8</maven.compiler.target>-->
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+<!--    </properties>-->
+
+<!--&lt;!&ndash;    <parent>&ndash;&gt;-->
+<!--&lt;!&ndash;        <groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;        <artifactId>spring-boot-starter-parent</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;        <version>2.7.8</version> &lt;!&ndash; ✅ 2.7.8 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <relativePath/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </parent>&ndash;&gt;-->
+<!--    <parent>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
+<!--        <version>2.6.7</version>-->
+<!--        <relativePath /> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+<!--    </parent>-->
+
+
+<!--<dependencies>-->
+<!--    &lt;!&ndash; Spring Boot Web pour construire une API REST &ndash;&gt;-->
+<!--    <dependency>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-web</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--        <groupId>org.springframework.cloud</groupId>-->
+<!--        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId> </dependency>-->
+<!--    &lt;!&ndash; Spring Boot Data JPA pour interagir avec la base de données &ndash;&gt;-->
+<!--    <dependency>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-data-jpa</artifactId>-->
+<!--    </dependency>-->
+
+<!--    &lt;!&ndash; Base de données H2 (à remplacer par MySQL ou PostgreSQL si besoin) &ndash;&gt;-->
+<!--    <dependency>-->
+<!--        <groupId>com.h2database</groupId>-->
+<!--        <artifactId>h2</artifactId>-->
+<!--        <scope>runtime</scope>-->
+<!--    </dependency>-->
+
+<!--    &lt;!&ndash; Validation pour les entrées utilisateur &ndash;&gt;-->
+<!--    <dependency>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-validation</artifactId>-->
+<!--    </dependency>-->
+
+<!--    &lt;!&ndash; Actuator pour la surveillance du microservice &ndash;&gt;-->
+<!--    <dependency>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-actuator</artifactId>-->
+<!--    </dependency>-->
+
+<!--    <dependency>-->
+<!--        <groupId>io.springfox</groupId>-->
+<!--        <artifactId>springfox-swagger2</artifactId>-->
+<!--        <version>2.6.1</version>-->
+<!--    </dependency>-->
+
+<!--    <dependency>-->
+<!--        <groupId>io.springfox</groupId>-->
+<!--        <artifactId>springfox-swagger-ui</artifactId>-->
+<!--        <version>2.6.1</version>-->
+<!--    </dependency>-->
+
+
+
+<!--    &lt;!&ndash; Spring Boot Test (pour les tests unitaires) &ndash;&gt;-->
+<!--    <dependency>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-test</artifactId>-->
+<!--        <scope>test</scope>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--        <groupId>org.projectlombok</groupId>-->
+<!--        <artifactId>lombok</artifactId>-->
+<!--        <scope>provided</scope>-->
+<!--    </dependency>-->
+
+<!--</dependencies>-->
+
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-dependencies</artifactId>-->
+<!--                <version>2021.0.8</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
+
+<!--<build>-->
+<!--    <plugins>-->
+<!--        &lt;!&ndash; Plugin Maven pour compiler du code Java &ndash;&gt;-->
+<!--        <plugin>-->
+<!--            <groupId>org.apache.maven.plugins</groupId>-->
+<!--            <artifactId>maven-compiler-plugin</artifactId>-->
+<!--            <version>3.5.1</version>-->
+<!--            <configuration>-->
+<!--                <source>${java.version}</source>-->
+<!--                <target>${java.version}</target>-->
+<!--            </configuration>-->
+<!--        </plugin>-->
+
+<!--        &lt;!&ndash; Plugin Spring Boot pour packager l'application &ndash;&gt;-->
+<!--        <plugin>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--        </plugin>-->
+<!--    </plugins>-->
+<!--</build>-->
+
+<!--</project>-->

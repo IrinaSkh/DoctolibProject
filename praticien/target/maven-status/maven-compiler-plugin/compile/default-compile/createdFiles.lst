@@ -1,0 +1,5 @@
+fr/unice/config/SwaggerConfig.class
+fr/unice/controller/PraticienController.class
+fr/unice/PraticienServiceApplication.class
+fr/unice/service/PraticienService.class
+fr/unice/model/Praticien.class
