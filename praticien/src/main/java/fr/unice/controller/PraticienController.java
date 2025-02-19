@@ -1,6 +1,7 @@
 package fr.unice.controller;
 
 import fr.unice.model.Praticien;
+
 import fr.unice.service.PraticienService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

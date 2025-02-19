@@ -16,4 +16,17 @@ eureka:
 
   instance:
     prefer-ip-address: true  # Utiliser l'adresse IP plutôt que le hostname
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+          semaphore:
+            maxConcurrentRequests: 10
+      circuitBreaker:
+        requestVolumeThreshold: 20
+        sleepWindowInMilliseconds: 5000
+        errorThresholdPercentage: 50
 
